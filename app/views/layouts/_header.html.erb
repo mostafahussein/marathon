@@ -1,0 +1,120 @@
+<header>
+		<div id="top_toolbar" class="clearfix">
+			<div class="container">
+				<ul class="top_toolbar_menu">
+					<li><a href="index-2.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="about.html">Help</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<div id="top_toolbar_user_lng">
+
+					<a href="#sign_up_form" class="user show_login_form">
+						Sign Up
+					</a>
+					<a href="#login_form" class="user show_login_form">
+						Login
+					</a>
+				</div>
+				<div class="login_form_modal_container">
+					<div id="sign_up_form" class="box">
+						<h3>New User</h3>
+						<div class="box-content clearfix">
+							<%= simple_form_for(@user, :html => {:class => 'form-horizontal' }) do |form| %>
+							<%= form.input :email, autofocus: true, label: false , placeholder: 'Type your email' %>
+							<%= form.input :password, label: false, placeholder: 'Enter your password' %>
+							<%= form.input :password_confirmation, label: false, placeholder: 'Repeat your password' %>
+							<button type="submit" class="button submit red right">Sign Up</button>
+							<% end %>
+						</div>
+					</div>
+				</div>
+
+				<div class="login_form_modal_container">
+					<div id="login_form" class="box">
+						<h3>User login</h3>
+						<div class="box-content clearfix">
+							<form action="#">
+								<input type="text" placeholder="Enter your email" name="email">
+								<input type="password" placeholder="Enter your password" name="pass">
+								<label for="remember" class="custom_checkbox remember_me"><input type="checkbox" name="remember" id="remember">Remember me</label>
+								<a class="button submit red right">Login</a>
+								<a href="#" class="forgotten_pass right">Forgot your password?</a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="header_main" class="clearfix">
+			<div class="container_12">
+				<div id="logo" class="grid_3">
+					<img src="/assets/Marathon_Logo1.png" alt="Motor Logo">
+				</div>
+				<nav class="grid_6">
+					<ul id="main_menu" class="clearfix">
+						<li class="current_menu_ancestor"><a href="#">Home</a>
+							<ul>
+								<li class="active"><a href="#">Home 1</a></li>
+								<li><a href="#">Home 2</a></li>
+								<li><a href="#">Home 3</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Pages</a>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Add item</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Home 1</a></li>
+								<li><a href="#">Home 2</a></li>
+								<li><a href="#">Home 3</a></li>
+								<li><a href="#">Single item</a></li>
+								<li><a href="#">No results</a></li>
+								<li><a href="#">List results</a></li>
+								<li><a href="#">Grid results</a></li>
+								<li><a href="#">Single post</a></li>
+								<li><a href="#">Under construction</a></li>
+								<li><a href="#">Second Level</a>
+									<ul>
+										<li><a href="#">Dummy item</a></li>
+										<li><a href="#">Third level</a>
+											<ul>
+												<li><a href="#">Dummy item</a></li>
+												<li><a href="#">Dummy item</a></li>
+												<li><a href="#">Dummy item</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Dummy item</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Buy</a></li>
+						<li><a href="#">News</a></li>
+					</ul>
+					<div id="responsive_navigation">
+						<select class="custom_select nav-responsive">
+							<option value="#">Navigate...</option>
+							<option value="#"> -  Home 1</option>
+							<option value="#"> -  Home 2</option>
+							<option value="#" selected=""> -  Home 3</option>
+							<option value="#"> -  About</option>
+							<option value="#"> -  Add item</option>
+							<option value="#"> -  Blog</option>
+							<option value="#"> -  Contact</option>
+							<option value="#"> -  Single item</option>
+							<option value="#"> -  No results</option>
+							<option value="#"> -  List results</option>
+							<option value="#"> -  Grid results</option>
+							<option value="#"> -  Single post</option>
+							<option value="#"> -  Under construction</option>
+							<option value="#"> Buy</option>
+							<option value="#"> News</option>
+						</select>
+					</div>
+
+				</nav>
+			</div>
+		</div>
+	</header>
